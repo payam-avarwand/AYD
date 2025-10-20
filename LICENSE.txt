@@ -1,0 +1,28 @@
+### **END USER LICENSE AGREEMENT (EULA) for "Avarwand AYD"**
+
+This software, named **"AYD"** (Avarwand YouTube Downloader), is a freeware product developed and distributed by **Avarwand**.
+
+By installing, copying, or otherwise using this software, you agree to be bound by the terms of this agreement.
+
+**1. LICENSE GRANT**  
+You are granted a non-exclusive, non-transferable, worldwide license to install and use this software on your devices, free of charge for personal and commercial use.
+
+**2. RESTRICTIONS**  
+-   You may not reverse engineer, decompile, disassemble, or modify the source code of this software.  
+-   You may not redistribute, sublicense, lease, rent, or resell this software or any part of it.  
+-   You may not claim ownership or authorship of this software or falsely represent it as your own work.  
+-   You may not use this software for any unlawful, malicious, or harmful purpose.
+
+**3. OWNERSHIP**  
+All rights, title, and interest, including all intellectual property rights in and to the software, are and shall remain the exclusive property of **Payam Avarwand** and **Avarwand**.
+
+**4. DISCLAIMER OF WARRANTY**  
+This software is provided "**as is**" without warranty of any kind, either express or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose.  
+The author and company shall not be liable for any damages, including, but not limited to, direct, indirect, special, incidental, or consequential damages arising out of the use or inability to use this software.
+
+**5. TERMINATION**  
+This license is effective until terminated. Your rights under this license will terminate automatically without notice if you fail to comply with any of its terms. Upon termination, you must cease all use of the software and destroy all copies in your possession.
+
+---
+
+© 2025 Avarwand. All rights reserved.
