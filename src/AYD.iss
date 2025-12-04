@@ -3,10 +3,10 @@
 #define MyAppPublisher "Avarwand"
 #define MyAppURL "https://github.com/payam-avarwand/AYD"
 #define MyAppExeName "AYD 1.2 Portable.exe"
-#define MyAppIcon "D:\Payam Avarwand\My Repos\GitHub\Word-Books\Code\Avarwand Software Production\14- AYD\Visual\1441800843_yumtube_47035.ico"
+#define MyAppIcon "D:\Payam Avarwand\My Repos\GitHub\Word-Books\Code\Avarwand Software Production\13- AYD\Visual\1441800843_yumtube_47035.ico"
 #define MyVbsLauncher "AYD_Launcher.vbs"
 #define MyAppIconName "1441800843_yumtube_47035.ico"
-#define MyAppFileVersion "1.2.4.24"
+#define MyAppFileVersion "1.2.5.2"
 
 [Setup]
 AppId={{AYD.com.yahoo@Avar_Payam}
@@ -21,7 +21,7 @@ AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\Avarwand\{#MyAppName}
 DefaultGroupName={#MyAppName}
 UninstallDisplayIcon={app}\lib\{#MyAppIconName}
-OutputDir="D:\Payam Avarwand\My Repos\GitHub\Avarwand\AYD\installer"
+OutputDir="D:\Payam Avarwand\My Repos\GitHub\Avarwand\Software\AYD\installer"
 OutputBaseFilename={#MyAppName}-{#MyAppVersion}-Setup
 SetupIconFile={#MyAppIcon}
 SolidCompression=yes
@@ -39,11 +39,11 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "D:\Payam Avarwand\My Repos\GitHub\Avarwand\AYD\installer\AYD 1.2 Portable\AYD 1.2 Portable.exe"; DestDir: "{app}\lib"; Flags: ignoreversion
+Source: "D:\Payam Avarwand\My Repos\GitHub\Avarwand\Software\AYD\installer\AYD 1.2 Portable\AYD 1.2 Portable.exe"; DestDir: "{app}\lib"; Flags: ignoreversion
 Source: "{#MyAppIcon}"; DestDir: "{app}\lib\_internal"; Flags: ignoreversion
 
 ; Install _internal under the lib folder
-Source: "D:\Payam Avarwand\My Repos\GitHub\Avarwand\AYD\installer\AYD 1.2 Portable\_internal\*"; DestDir: "{app}\lib\_internal"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "D:\Payam Avarwand\My Repos\GitHub\Avarwand\Software\AYD\installer\AYD 1.2 Portable\_internal\*"; DestDir: "{app}\lib\_internal"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 ; VBS launcher
@@ -110,6 +110,3 @@ begin
     end;
   end;
 end;
-
-
-
