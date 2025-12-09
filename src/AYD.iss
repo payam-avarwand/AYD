@@ -1,12 +1,12 @@
 #define MyAppName "AYD"
-#define MyAppVersion "1.2"
+#define MyAppVersion "1.3"
 #define MyAppPublisher "Avarwand"
 #define MyAppURL "https://github.com/payam-avarwand/AYD"
-#define MyAppExeName "AYD 1.2 Portable.exe"
+#define MyAppExeName "AYD 1.3.exe"
 #define MyAppIcon "D:\Payam Avarwand\My Repos\GitHub\Word-Books\Code\Avarwand Software Production\13- AYD\Visual\1441800843_yumtube_47035.ico"
 #define MyVbsLauncher "AYD_Launcher.vbs"
 #define MyAppIconName "1441800843_yumtube_47035.ico"
-#define MyAppFileVersion "1.2.5.2"
+#define MyAppFileVersion "1.3.5.1"
 
 [Setup]
 AppId={{AYD.com.yahoo@Avar_Payam}
@@ -39,16 +39,16 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "D:\Payam Avarwand\My Repos\GitHub\Avarwand\Software\AYD\installer\AYD 1.2 Portable\AYD 1.2 Portable.exe"; DestDir: "{app}\lib"; Flags: ignoreversion
-Source: "{#MyAppIcon}"; DestDir: "{app}\lib\_internal"; Flags: ignoreversion
+Source: "C:\Users\Payam\Desktop\AYD 1.3.exe"; DestDir: "{app}\lib"; Flags: ignoreversion
+Source: "{#MyAppIcon}"; DestDir: "{app}\lib"; Flags: ignoreversion
 
-; Install _internal under the lib folder
-Source: "D:\Payam Avarwand\My Repos\GitHub\Avarwand\Software\AYD\installer\AYD 1.2 Portable\_internal\*"; DestDir: "{app}\lib\_internal"; Flags: ignoreversion recursesubdirs createallsubdirs
+
+
 
 [Icons]
 ; VBS launcher
-Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyVbsLauncher}"; IconFilename: "{app}\lib\_internal\{#MyAppIconName}"
-Name: "{autodesktop}\{#MyAppName} {#MyAppVersion}"; Filename: "{app}\{#MyVbsLauncher}"; Tasks: desktopicon; IconFilename: "{app}\lib\_internal\{#MyAppIconName}"
+Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyVbsLauncher}"; IconFilename: "{app}\lib\{#MyAppIconName}"
+Name: "{autodesktop}\{#MyAppName} {#MyAppVersion}"; Filename: "{app}\{#MyVbsLauncher}"; Tasks: desktopicon; IconFilename: "{app}\lib\{#MyAppIconName}"
 
 [Run]
 Filename: "{app}\{#MyVbsLauncher}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: shellexec postinstall skipifsilent
@@ -66,11 +66,13 @@ begin
     VbsContent :=
       'On Error Resume Next' + #13#10 +
       'Set fso = CreateObject("Scripting.FileSystemObject")' + #13#10 +
-      'Set shell = CreateObject("WScript.Shell")' + #13#10 +
-      'appPath = fso.GetParentFolderName(WScript.ScriptFullName)' + #13#10 +
-      'exePath = appPath & "\lib\{#MyAppExeName}"' + #13#10 +
+      'Set shell = CreateObject("Shell.Application")' + #13#10 +
+      'launcherPath = fso.GetParentFolderName(WScript.ScriptFullName)' + #13#10 +
+      'libPath = launcherPath & "\lib"' + #13#10 +
+      'exePath = libPath & "\{#MyAppExeName}"' + #13#10 +
       'If fso.FileExists(exePath) Then' + #13#10 +
-      '  shell.Run Chr(34) & exePath & Chr(34), 1, False' + #13#10 +
+      '  '' Run as Administrator using "runas"' + #13#10 +
+      '  shell.ShellExecute exePath, "", libPath, "runas", 1' + #13#10 +
       'Else' + #13#10 +
       '  MsgBox "Executable not found: " & exePath, vbCritical, "Error"' + #13#10 +
       'End If';
@@ -110,3 +112,6 @@ begin
     end;
   end;
 end;
+
+
+
