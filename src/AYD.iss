@@ -6,7 +6,7 @@
 #define MyAppIcon "D:\Payam Avarwand\My Repos\GitHub\Word-Books\Code\Avarwand Software Production\13- AYD\Visual\1441800843_yumtube_47035.ico"
 #define MyVbsLauncher "AYD_Launcher.vbs"
 #define MyAppIconName "1441800843_yumtube_47035.ico"
-#define MyAppFileVersion "1.3.5.1"
+#define MyAppFileVersion "1.3.6.5"
 
 [Setup]
 AppId={{AYD.com.yahoo@Avar_Payam}
